@@ -1,0 +1,1603 @@
+
+bo3-e2k-rel:     file format elf64-e2k
+
+
+Disassembly of section .init:
+
+0000000000010750 <_init>:
+   10750:	
+HS    0c1080b3  nop 1
+ALS0  3f81c080  rrd,0 %ip, %dr0
+ALS1  11c0dd81  addd,1 0x0, _f64,_lts1 0x28b0, %dr1
+CS1   00000000  setwd wsz = 0xa, nfx = 0x1, dbl = 0x0
+ALES0 01c0
+GAP       0000
+LTS2  00000000
+LTS1  000028b0
+LTS0  00000150
+
+   10770:	
+HS    10000001
+ALS2  11808180  addd,2 %dr0, %dr1, %dr0
+
+   10778:	
+HS    04000011
+ALS0  6780d880  ldd,0 %dr0, _f32s,_lts0 0x60, %dr0
+LTS1  00000000
+LTS0  00000060
+
+   10788:	
+HS    0c000212  nop 4
+ALS0  61c080d1  movtd,0 %dr0, %ctpr1
+ALS1  2180c040  cmpedb,1 %dr0, 0x0, %pred0
+LTS0  00000000
+
+   10798:	
+HS    00009012
+SS    c0000460  ipd 3
+CS1   50000006  call %ctpr1, wbs = 0x6 ? ~%pred0
+LTS0  00000000
+
+   107a8:	
+HS    00004001
+CS0   f0000000  return %ctpr3
+
+   107b0:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+Disassembly of section .plt:
+
+00000000000107b8 <.plt>:
+   107b8:	
+HS    14000122  nop 2
+ALS0  67c0dc88  ldd,0 0x0, _f64,_lts0 0x13008, %dr8
+ALS2  67c8dc8a  ldd,2 0x8, _f64,_lts0 0x13008, %dr10
+LTS2  00000000
+LTS1  00000000
+LTS0  00013008
+
+   107d0:	
+HS    04000001
+ALS0  61c08ad1  movtd,0 %dr10, %ctpr1
+
+   107d8:	
+HS    00009012
+SS    80000420  ipd 2
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   107e8:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   107f0:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+00000000000107f8 <strcpy@secondary_plt>:
+   107f8:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0x0, %r9
+CS0   0ffffff8  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00000000
+LTS0  00000110
+
+
+0000000000010818 <printf@secondary_plt>:
+   10818:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0x18, %r9
+CS0   0ffffff4  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00000018
+LTS0  00000110
+
+
+0000000000010838 <_Znwm@secondary_plt>:
+   10838:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0x30, %r9
+CS0   0ffffff0  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00000030
+LTS0  00000110
+
+
+0000000000010858 <malloc@secondary_plt>:
+   10858:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0x48, %r9
+CS0   0fffffec  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00000048
+LTS0  00000110
+
+
+0000000000010878 <__gxx_personality_v0@secondary_plt>:
+   10878:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0x60, %r9
+CS0   0fffffe8  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00000060
+LTS0  00000110
+
+
+0000000000010898 <_Unwind_Resume@secondary_plt>:
+   10898:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0x78, %r9
+CS0   0fffffe4  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00000078
+LTS0  00000110
+
+
+00000000000108b8 <__libc_start_main@secondary_plt>:
+   108b8:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0x90, %r9
+CS0   0fffffe0  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00000090
+LTS0  00000110
+
+
+00000000000108d8 <memcpy@secondary_plt>:
+   108d8:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0xa8, %r9
+CS0   0fffffdc  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  000000a8
+LTS0  00000110
+
+
+00000000000108f8 <strlen@secondary_plt>:
+   108f8:	
+HS    0400d034
+SS    80000020  ipd 2
+ALS0  10c0d989  adds,0 0x0, _f32s,_lts1 0xc0, %r9
+CS0   0fffffd8  ibranch 0x107b8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  000000c0
+LTS0  00000110
+
+
+0000000000010918 <strcpy@plt>:
+   10918:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13018, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013018
+LTS0  00000110
+
+   10930:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   10938:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+0000000000010940 <printf@plt>:
+   10940:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13020, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013020
+LTS0  00000110
+
+   10958:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   10960:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+0000000000010968 <_Znwm@plt>:
+   10968:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13028, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013028
+LTS0  00000110
+
+   10980:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   10988:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+0000000000010990 <malloc@plt>:
+   10990:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13030, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013030
+LTS0  00000110
+
+   109a8:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   109b0:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+00000000000109b8 <__gxx_personality_v0@plt>:
+   109b8:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13038, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013038
+LTS0  00000110
+
+   109d0:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   109d8:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+00000000000109e0 <_Unwind_Resume@plt>:
+   109e0:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13040, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013040
+LTS0  00000110
+
+   109f8:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   10a00:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+0000000000010a08 <__libc_start_main@plt>:
+   10a08:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13048, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013048
+LTS0  00000110
+
+   10a20:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   10a28:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+0000000000010a30 <memcpy@plt>:
+   10a30:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13050, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013050
+LTS0  00000110
+
+   10a48:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   10a50:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+0000000000010a58 <strlen@plt>:
+   10a58:	
+HS    04008122  nop 2
+ALS0  67c0dd88  ldd,0 0x0, _f64,_lts1 0x13058, %dr8
+CS1   00000000  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013058
+LTS0  00000110
+
+   10a70:	
+HS    04000001
+ALS0  61c088d1  movtd,0 %dr8, %ctpr1
+
+   10a78:	
+HS    00001001
+SS    80000420  ct %ctpr1
+                ipd 2
+
+
+Disassembly of section .text:
+
+0000000000010a80 <_start>:
+   10a80:	
+HS    0c10c034
+ALS0  58ecd982  getsp,0 _f32s,_lts1 0xffffffc0, %dr2
+ALS1  10c0c083  adds,1 0x0, 0x0, %r3
+CS0   4ffffff1  disp %ctpr1, 0x10a08
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  ffffffc0
+LTS0  00000110
+
+   10aa0:	
+HS    3c000044
+ALS0  11c0dc00  addd,0 0x0, _f64,_lts0 0x10c88, %db[0]
+ALS1  11c0c006  addd,1 0x0, 0x0, %db[6]
+ALS2  11c0de04  addd,2 0x0, _f64,_lts2 0x115d0, %db[4]
+ALS3  91c08005  addd,3,sm 0x0, %dr0, %db[5]
+GAP   00000000
+LTS3  00000000
+LTS2  000115d0
+LTS1  00000000
+LTS0  00010c88
+
+   10ac8:	
+HS    0c000032
+ALS0  1182dc81  addd,0 %dr2, _f64,_lts0 0x40, %dr1
+ALS1  11c0de03  addd,1 0x0, _f64,_lts2 0x11420, %db[3]
+GAP   00000000
+LTS3  00000000
+LTS2  00011420
+LTS1  00000000
+LTS0  00000040
+
+   10ae8:	
+HS    0c000112  nop 2
+ALS0  6781c080  ldd,0 %dr1, 0x0, %dr0
+ALS1  1181c802  addd,1 %dr1, 0x8, %db[2]
+LTS0  00000000
+
+   10af8:	
+HS    04000001
+ALS0  0cc28001  sxt,0 0x2, %r0, %db[1]
+
+   10b00:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   10b10:	
+HS    10004292  nop 5
+ALS2  26c0c083  stw,2 0x0, 0x0, %r3
+CS0   f0000000  return %ctpr3
+LTS0  00000000
+
+   10b20:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000010b28 <__do_global_dtors_aux>:
+   10b28:	
+HS    0c00c134  nop 2
+ALS0  64c0ddf0  ldb,0 0x0, _f64,_lts1 0x13140, %dg16
+ALS1  90c1c0f1  adds,1,sm 0x1, 0x0, %g17
+CS0   f0000000  return %ctpr3
+CS1   00000000  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+LTS2  00000000
+LTS1  00013140
+LTS0  00000090
+
+   10b48:	
+HS    04000081  nop 1
+ALS0  21f0c040  cmpedb,0 %dg16, 0x0, %pred0
+
+   10b50:	
+HS    10010021
+ALS2  24c0dcf1  stb,2 0x0, _f64,_lts0 0x13140, %g17 ? %pred0
+LTS2  00000000
+LTS1  00000000
+LTS0  00013140
+CDS0  10600000  rlp,cd00 %pred0, >alc2
+
+   10b68:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000010b70 <frame_dummy>:
+   10b70:	
+HS    0000c292  nop 5
+CS0   f0000000  return %ctpr3
+CS1   00000000  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+LTS0  00000090
+
+   10b80:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000010b88 <_Z9exp_entryv>:
+   10b88:	
+HS    04108022
+ALS0  58ecd581  getsp,0 _f16s,_lts1hi 0xfff0, %dr1
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  fff00000
+LTS0  00000110
+
+   10ba0:	
+HS    04000011
+ALS0  91c0dc00  addd,0,sm 0x0, _f64,_lts0 0x116f0, %db[0]
+LTS1  00000000
+LTS0  000116f0
+
+   10bb0:	
+HS    04000011
+ALS0  91c0dc82  addd,0,sm 0x0, _f64,_lts0 0x116f0, %dr2
+LTS1  00000000
+LTS0  000116f0
+
+   10bc0:	
+HS    10000001
+ALS2  a781c082  std,2,sm %dr1, 0x0, %dr2
+
+   10bc8:	
+HS    00004201  nop 4
+CS0   4fffffaf  disp %ctpr1, 0x10940
+
+   10bd0:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   10be0:	
+HS    00004281  nop 5
+CS0   f0000000  return %ctpr3
+
+   10be8:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000010bf0 <_Z15BufferOverflow2v>:
+   10bf0:	
+HS    04108022
+ALS0  58ecd582  getsp,0 _f16s,_lts1hi 0xfff0, %dr2
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  fff00000
+LTS0  00000110
+
+   10c08:	
+HS    04004212  nop 4
+ALS0  91c0d400  addd,0,sm 0x0, _f16s,_lts0hi 0x40, %db[0]
+CS0   4fffffb1  disp %ctpr1, 0x10990
+LTS0  00400000
+
+   10c18:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   10c28:	
+HS    1c004034
+ALS0  91c00084  addd,0,sm 0x0, %db[0], %dr4
+ALS1  91c0d485  addd,1,sm 0x0, _f16s,_lts0hi 0x38, %dr5
+ALS2  91c0dd86  addd,2,sm 0x0, _f64,_lts1 0x10b88, %dr6
+CS0   f0000000  return %ctpr3
+LTS2  00000000
+LTS1  00010b88
+LTS0  00380000
+
+   10c48:	
+HS    04000001
+ALS0  91c08483  addd,0,sm 0x0, %dr4, %dr3
+
+   10c50:	
+HS    7c000035
+ALS0  1183c884  addd,0 %dr3, 0x8, %dr4
+ALS1  1183d485  addd,1 %dr3, _f16s,_lts0hi 0x30, %dr5
+ALS2  a783c085  std,2,sm %dr3, 0x0, %dr5
+ALS3  1183c887  addd,3 %dr3, 0x8, %dr7
+ALS4  91c08380  addd,4,sm 0x0, %dr3, %dr0
+LTS1  00000000
+LTS0  00300000
+
+   10c70:	
+HS    90000112  nop 2
+ALS2  a784c086  std,2,sm %dr4, 0x0, %dr6
+ALS5  a785c087  std,5,sm %dr5, 0x0, %dr7
+LTS0  00000000
+
+   10c80:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000010c88 <main>:
+   10c88:	
+HS    04108022
+ALS0  58ecd582  getsp,0 _f16s,_lts1hi 0xffb0, %dr2
+CS1   040000c8  setwd wsz = 0xc, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x8, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  ffb00000
+LTS0  00000190
+
+   10ca0:	
+HS    04000011
+ALS0  1182d481  addd,0 %dr2, _f16s,_lts0hi 0x50, %dr1
+LTS1  00000000
+LTS0  00500000
+
+   10cb0:	
+HS    1c000023
+ALS0  90c0c083  adds,0,sm 0x0, 0x0, %r3
+ALS1  1181d48d  addd,1 %dr1, _f16s,_lts0hi 0xfff0, %dr13
+ALS2  91c0d084  addd,2,sm 0x0, _f16s,_lts0lo 0x28, %dr4
+LTS1  00000000
+LTS0  fff00028
+
+   10cc8:	
+HS    04000001
+ALS0  91c08400  addd,0,sm 0x0, %dr4, %db[0]
+
+   10cd0:	
+HS    00004201  nop 4
+CS0   4fffff93  disp %ctpr1, 0x10968
+
+   10cd8:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10ce8:	
+HS    04004012
+ALS0  91c0008e  addd,0,sm 0x0, %db[0], %dr14
+CS0   4000000c  disp %ctpr1, 0x10d48
+LTS0  00000000
+
+   10cf8:	
+HS    04000001
+ALS0  91c08e85  addd,0,sm 0x0, %dr14, %dr5
+
+   10d00:	
+HS    04000101  nop 2
+ALS0  2185c040  cmpedb,0 %dr5, 0x0, %pred0
+
+   10d08:	
+HS    00001001
+SS    c0000440  ct %ctpr1 ? %pred0
+                ipd 3
+
+   10d10:	
+HS    0c004213  nop 4
+ALS0  90c0c183  adds,0,sm 0x0, 0x1, %r3
+ALS1  91c08500  addd,1,sm 0x0, %dr5, %db[0]
+CS0   400000b9  disp %ctpr1, 0x112d8
+
+   10d20:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10d30:	
+HS    0c004213  nop 4
+ALS0  90c0c083  adds,0,sm 0x0, 0x0, %r3
+ALS1  91c0858a  addd,1,sm 0x0, %dr5, %dr10
+CS0   40000004  disp %ctpr1, 0x10d50
+
+   10d40:	
+HS    00001001
+SS    c0000420  ct %ctpr1
+                ipd 3
+
+   10d48:	
+HS    04000001
+ALS0  91c0c08a  addd,0,sm 0x0, 0x0, %dr10
+
+   10d50:	
+HS    3c000024
+ALS0  90c0c086  adds,0,sm 0x0, 0x0, %r6
+ALS1  1181d48d  addd,1 %dr1, _f16s,_lts0hi 0xfff0, %dr13
+ALS2  a78dc08a  std,2,sm %dr13, 0x0, %dr10
+ALS3  91c0d084  addd,3,sm 0x0, _f16s,_lts0lo 0x28, %dr4
+LTS0  fff00028
+
+   10d68:	
+HS    0c000012
+ALS0  118dc88d  addd,0 %dr13, 0x8, %dr13
+ALS1  91c08400  addd,1,sm 0x0, %dr4, %db[0]
+LTS0  00000000
+
+   10d78:	
+HS    00004201  nop 4
+CS0   4fffff7e  disp %ctpr1, 0x10968
+
+   10d80:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10d90:	
+HS    04004012
+ALS0  91c0008e  addd,0,sm 0x0, %db[0], %dr14
+CS0   4000000c  disp %ctpr1, 0x10df0
+LTS0  00000000
+
+   10da0:	
+HS    04000001
+ALS0  91c08e87  addd,0,sm 0x0, %dr14, %dr7
+
+   10da8:	
+HS    04000101  nop 2
+ALS0  2187c041  cmpedb,0 %dr7, 0x0, %pred1
+
+   10db0:	
+HS    00001001
+SS    c0000441  ct %ctpr1 ? %pred1
+                ipd 3
+
+   10db8:	
+HS    0c004213  nop 4
+ALS0  90c0c186  adds,0,sm 0x0, 0x1, %r6
+ALS1  91c08700  addd,1,sm 0x0, %dr7, %db[0]
+CS0   400000c1  disp %ctpr1, 0x113c0
+
+   10dc8:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10dd8:	
+HS    0c004213  nop 4
+ALS0  90c0c086  adds,0,sm 0x0, 0x0, %r6
+ALS1  91c0878b  addd,1,sm 0x0, %dr7, %dr11
+CS0   40000004  disp %ctpr1, 0x10df8
+
+   10de8:	
+HS    00001001
+SS    c0000420  ct %ctpr1
+                ipd 3
+
+   10df0:	
+HS    04000001
+ALS0  91c0c08b  addd,0,sm 0x0, 0x0, %dr11
+
+   10df8:	
+HS    14000012
+ALS0  1181d48d  addd,0 %dr1, _f16s,_lts0hi 0xfff0, %dr13
+ALS2  a78dc08b  std,2,sm %dr13, 0x0, %dr11
+LTS0  fff00000
+
+   10e08:	
+HS    04000001
+ALS0  678dc08d  ldd,0 %dr13, 0x0, %dr13
+
+   10e10:	
+HS    00004201  nop 4
+CS0   4fffffbc  disp %ctpr1, 0x10bf0
+
+   10e18:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10e28:	
+HS    0c000012
+ALS0  91c0008e  addd,0,sm 0x0, %db[0], %dr14
+ALS1  91c08d00  addd,1,sm 0x0, %dr13, %db[0]
+LTS0  00000000
+
+   10e38:	
+HS    04000001
+ALS0  91c08e01  addd,0,sm 0x0, %dr14, %db[1]
+
+   10e40:	
+HS    00004201  nop 4
+CS0   40000061  disp %ctpr1, 0x11148
+
+   10e48:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10e58:	
+HS    04004222  nop 4
+ALS0  91c0dc00  addd,0,sm 0x0, _f64,_lts0 0x1170a, %db[0]
+CS0   4fffff80  disp %ctpr1, 0x10a58
+LTS2  00000000
+LTS1  00000000
+LTS0  0001170a
+
+   10e70:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10e80:	
+HS    0c004023
+ALS0  91c0008d  addd,0,sm 0x0, %db[0], %dr13
+ALS1  91c0dc00  addd,1,sm 0x0, _f64,_lts0 0x1170a, %db[0]
+CS0   4fffff7b  disp %ctpr1, 0x10a58
+LTS1  00000000
+LTS0  0001170a
+
+   10e98:	
+HS    04000001
+ALS0  118dc888  addd,0 %dr13, 0x8, %dr8
+
+   10ea0:	
+HS    0c000012
+ALS0  91c0888c  addd,0,sm 0x0, %dr8, %dr12
+ALS1  91c08889  addd,1,sm 0x0, %dr8, %dr9
+LTS0  00000000
+
+   10eb0:	
+HS    04000001
+ALS0  90c08c8d  adds,0,sm 0x0, %r12, %r13
+
+   10eb8:	
+HS    04000001
+ALS0  12c08d8d  subs,0 0x0, %r13, %r13
+
+   10ec0:	
+HS    04000001
+ALS0  90c08df0  adds,0,sm 0x0, %r13, %g16
+
+   10ec8:	
+HS    04100091  nop 1
+ALS0  58ecf082  getsp,0 %g16, %dr2
+ALES0 01c0
+GAP       0000
+LTS0  00000000
+
+   10ed8:	
+HS    04000011
+ALS0  1182d48d  addd,0 %dr2, _f16s,_lts0hi 0x10, %dr13
+LTS1  00000000
+LTS0  00100000
+
+   10ee8:	
+HS    90009024
+SS    c0000420  ipd 3
+ALS2  a781d48d  std,2,sm %dr1, _f16s,_lts0hi 0xffe8, %dr13
+ALS5  6781d08d  ldd,5 %dr1, _f16s,_lts0lo 0xffe8, %dr13
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  ffe8ffe8
+
+   10f00:	
+HS    0c0040a3  nop 1
+ALS0  91c0008e  addd,0,sm 0x0, %db[0], %dr14
+ALS1  91c0dc01  addd,1,sm 0x0, _f64,_lts0 0x1170a, %db[1]
+CS0   4fffff43  disp %ctpr1, 0x10918
+LTS1  00000000
+LTS0  0001170a
+
+   10f18:	
+HS    90000112  nop 2
+ALS2  a78dc08e  std,2,sm %dr13, 0x0, %dr14
+ALS5  6781d48d  ldd,5 %dr1, _f16s,_lts0hi 0xffe8, %dr13
+LTS0  ffe80000
+
+   10f28:	
+HS    04000001
+ALS0  118dc88d  addd,0 %dr13, 0x8, %dr13
+
+   10f30:	
+HS    04009013
+SS    c0000420  ipd 3
+ALS0  91c08d00  addd,0,sm 0x0, %dr13, %db[0]
+CS1   50000008  call %ctpr1, wbs = 0x8
+
+   10f40:	
+HS    14000012
+ALS0  1181d48d  addd,0 %dr1, _f16s,_lts0hi 0xfff0, %dr13
+ALS2  6781d08e  ldd,2 %dr1, _f16s,_lts0lo 0xffe8, %dr14
+LTS0  fff0ffe8
+
+   10f50:	
+HS    04000001
+ALS0  118dc88d  addd,0 %dr13, 0x8, %dr13
+
+   10f58:	
+HS    04000001
+ALS0  678dc08d  ldd,0 %dr13, 0x0, %dr13
+
+   10f60:	
+HS    04000081  nop 1
+ALS0  91c08e01  addd,0,sm 0x0, %dr14, %db[1]
+
+   10f68:	
+HS    04000001
+ALS0  91c08d00  addd,0,sm 0x0, %dr13, %db[0]
+
+   10f70:	
+HS    00004201  nop 4
+CS0   4000003b  disp %ctpr1, 0x11148
+
+   10f78:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10f88:	
+HS    0c000012
+ALS0  1181d48d  addd,0 %dr1, _f16s,_lts0hi 0xfff0, %dr13
+ALS1  1181d08e  addd,1 %dr1, _f16s,_lts0lo 0xfff0, %dr14
+LTS0  fff0fff0
+
+   10f98:	
+HS    14000112  nop 2
+ALS0  678dc08d  ldd,0 %dr13, 0x0, %dr13
+ALS2  678ec08e  ldd,2 %dr14, 0x0, %dr14
+LTS0  00000000
+
+   10fa8:	
+HS    0c000112  nop 2
+ALS0  678dc08d  ldd,0 %dr13, 0x0, %dr13
+ALS1  91c08e00  addd,1,sm 0x0, %dr14, %db[0]
+LTS0  00000000
+
+   10fb8:	
+HS    04000001
+ALS0  678dc08d  ldd,0 %dr13, 0x0, %dr13
+
+   10fc0:	
+HS    00000080  nop 1
+LTS0  00000000
+
+   10fc8:	
+HS    04000381  nop 7
+ALS0  61c08dd1  movtd,0 %dr13, %ctpr1
+
+   10fd0:	
+HS    00000080  nop 1
+LTS0  00000000
+
+   10fd8:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   10fe8:	
+HS    0c000012
+ALS0  1181d48d  addd,0 %dr1, _f16s,_lts0hi 0xfff0, %dr13
+ALS1  1181d08e  addd,1 %dr1, _f16s,_lts0lo 0xfff0, %dr14
+LTS0  fff0fff0
+
+   10ff8:	
+HS    0c000012
+ALS0  118dc88d  addd,0 %dr13, 0x8, %dr13
+ALS1  118ec88e  addd,1 %dr14, 0x8, %dr14
+LTS0  00000000
+
+   11008:	
+HS    14000112  nop 2
+ALS0  678dc08d  ldd,0 %dr13, 0x0, %dr13
+ALS2  678ec08e  ldd,2 %dr14, 0x0, %dr14
+LTS0  00000000
+
+   11018:	
+HS    0c000112  nop 2
+ALS0  678dc08d  ldd,0 %dr13, 0x0, %dr13
+ALS1  91c08e00  addd,1,sm 0x0, %dr14, %db[0]
+LTS0  00000000
+
+   11028:	
+HS    04000001
+ALS0  678dc08d  ldd,0 %dr13, 0x0, %dr13
+
+   11030:	
+HS    00000080  nop 1
+LTS0  00000000
+
+   11038:	
+HS    04000381  nop 7
+ALS0  61c08dd1  movtd,0 %dr13, %ctpr1
+
+   11040:	
+HS    00000080  nop 1
+LTS0  00000000
+
+   11048:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   11058:	
+HS    0c004013
+ALS0  90c08c8d  adds,0,sm 0x0, %r12, %r13
+ALS1  91c0c080  addd,1,sm 0x0, 0x0, %dr0
+CS0   f0000000  return %ctpr3
+
+   11068:	
+HS    04000001
+ALS0  108dcf8d  adds,0 %r13, 0xf, %r13
+
+   11070:	
+HS    04000001
+ALS0  028dcf8d  andns,0 %r13, 0xf, %r13
+
+   11078:	
+HS    04000001
+ALS0  90c08df0  adds,0,sm 0x0, %r13, %g16
+
+   11080:	
+HS    04100091  nop 1
+ALS0  58ecf082  getsp,0 %g16, %dr2
+ALES0 01c0
+GAP       0000
+LTS0  00000000
+
+   11090:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+   11098:	
+HS    9c000034
+ALS0  1181d58d  addd,0 %dr1, _f16s,_lts1hi 0xffc8, %dr13
+ALS1  1181d18e  addd,1 %dr1, _f16s,_lts1lo 0xffd8, %dr14
+ALS2  a781d400  std,2,sm %dr1, _f16s,_lts0hi 0xffc8, %db[0]
+ALS5  a681d001  stw,5,sm %dr1, _f16s,_lts0lo 0xffd0, %b[1]
+LTS2  00000000
+LTS1  ffc8ffd8
+LTS0  ffc8ffd0
+
+   110b8:	
+HS    04000101  nop 2
+ALS0  678dc08f  ldd,0 %dr13, 0x0, %dr15
+
+   110c0:	
+HS    90000112  nop 2
+ALS2  a78ec08f  std,2,sm %dr14, 0x0, %dr15
+ALS5  678dc88d  ldd,5 %dr13, 0x8, %dr13
+LTS0  00000000
+
+   110d0:	
+HS    10000001
+ALS2  a78ec88d  std,2,sm %dr14, 0x8, %dr13
+
+   110d8:	
+HS    04000001
+ALS0  90c08c8d  adds,0,sm 0x0, %r12, %r13
+
+   110e0:	
+HS    04000001
+ALS0  108dcf8d  adds,0 %r13, 0xf, %r13
+
+   110e8:	
+HS    04000001
+ALS0  028dcf8d  andns,0 %r13, 0xf, %r13
+
+   110f0:	
+HS    04000001
+ALS0  90c08df0  adds,0,sm 0x0, %r13, %g16
+
+   110f8:	
+HS    04100011
+ALS0  58ecf082  getsp,0 %g16, %dr2
+ALES0 01c0
+GAP       0000
+LTS0  00000000
+
+   11108:	
+HS    04000011
+ALS0  6781d48d  ldd,0 %dr1, _f16s,_lts0hi 0xffd8, %dr13
+LTS1  00000000
+LTS0  ffd80000
+
+   11118:	
+HS    00004081  nop 1
+CS0   4fffff19  disp %ctpr1, 0x109e0
+
+   11120:	
+HS    04000101  nop 2
+ALS0  91c08d00  addd,0,sm 0x0, %dr13, %db[0]
+
+   11128:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000008  call %ctpr1, wbs = 0x8
+LTS0  00000000
+
+   11138:	
+HS    00004281  nop 5
+CS0   f0000000  return %ctpr3
+
+   11140:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000011148 <_ZN9BaseClass9SetBufferEPh>:
+   11148:	
+HS    04108022
+ALS0  58ecd583  getsp,0 _f16s,_lts1hi 0xffe0, %dr3
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  ffe00000
+LTS0  00000110
+
+   11160:	
+HS    0c004013
+ALS0  1180c885  addd,0 %dr0, 0x8, %dr5
+ALS1  1181c886  addd,1 %dr1, 0x8, %dr6
+CS0   4fffff1a  disp %ctpr1, 0x10a30
+
+   11170:	
+HS    1c000113  nop 2
+ALS0  6781c084  ldd,0 %dr1, 0x0, %dr4
+ALS1  91c08500  addd,1,sm 0x0, %dr5, %db[0]
+ALS2  91c08601  addd,2,sm 0x0, %dr6, %db[1]
+
+   11180:	
+HS    04000001
+ALS0  91c08402  addd,0,sm 0x0, %dr4, %db[2]
+
+   11188:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   11198:	
+HS    00004281  nop 5
+CS0   f0000000  return %ctpr3
+
+   111a0:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+00000000000111a8 <_ZN9BaseClass11PrintBufferEv>:
+   111a8:	
+HS    04108022
+ALS0  58ecd582  getsp,0 _f16s,_lts1hi 0xfff0, %dr2
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  fff00000
+LTS0  00000110
+
+   111c0:	
+HS    1c000033
+ALS0  1180c883  addd,0 %dr0, 0x8, %dr3
+ALS1  91c0dc00  addd,1,sm 0x0, _f64,_lts0 0x11630, %db[0]
+ALS2  91c0de84  addd,2,sm 0x0, _f64,_lts2 0x11630, %dr4
+LTS3  00000000
+LTS2  00011630
+LTS1  00000000
+LTS0  00011630
+
+   111e0:	
+HS    94000013
+ALS0  91c08301  addd,0,sm 0x0, %dr3, %db[1]
+ALS2  a782c084  std,2,sm %dr2, 0x0, %dr4
+ALS5  a782c883  std,5,sm %dr2, 0x8, %dr3
+
+   111f0:	
+HS    00004201  nop 4
+CS0   4ffffeea  disp %ctpr1, 0x10940
+
+   111f8:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   11208:	
+HS    00004281  nop 5
+CS0   f0000000  return %ctpr3
+
+   11210:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000011218 <_ZN9BaseClassC1Ev>:
+   11218:	
+HS    00008011
+CS1   00000000  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+LTS1  00000000
+LTS0  00000090
+
+   11228:	
+HS    04004022
+ALS0  91c0dc83  addd,0,sm 0x0, _f64,_lts0 0x11628, %dr3
+CS0   f0000000  return %ctpr3
+LTS2  00000000
+LTS1  00000000
+LTS0  00011628
+
+   11240:	
+HS    10000201  nop 4
+ALS2  a780c083  std,2,sm %dr0, 0x0, %dr3
+
+   11248:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000011250 <_ZN8MyClass111PrintBufferEv>:
+   11250:	
+HS    04108022
+ALS0  58ecd582  getsp,0 _f16s,_lts1hi 0xfff0, %dr2
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  fff00000
+LTS0  00000110
+
+   11268:	
+HS    04000011
+ALS0  91c0dc00  addd,0,sm 0x0, _f64,_lts0 0x11650, %db[0]
+LTS1  00000000
+LTS0  00011650
+
+   11278:	
+HS    04000011
+ALS0  91c0dc83  addd,0,sm 0x0, _f64,_lts0 0x11650, %dr3
+LTS1  00000000
+LTS0  00011650
+
+   11288:	
+HS    10000001
+ALS2  a782c083  std,2,sm %dr2, 0x0, %dr3
+
+   11290:	
+HS    00004201  nop 4
+CS0   4ffffed6  disp %ctpr1, 0x10940
+
+   11298:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   112a8:	
+HS    04000001
+ALS0  91c08000  addd,0,sm 0x0, %dr0, %db[0]
+
+   112b0:	
+HS    00004201  nop 4
+CS0   4fffffdf  disp %ctpr1, 0x111a8
+
+   112b8:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   112c8:	
+HS    00004281  nop 5
+CS0   f0000000  return %ctpr3
+
+   112d0:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+00000000000112d8 <_ZN8MyClass1C1Ev>:
+   112d8:	
+HS    04108022
+ALS0  58ecd582  getsp,0 _f16s,_lts1hi 0xfff0, %dr2
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  fff00000
+LTS0  00000110
+
+   112f0:	
+HS    04004212  nop 4
+ALS0  91c08000  addd,0,sm 0x0, %dr0, %db[0]
+CS0   4fffffe5  disp %ctpr1, 0x11218
+LTS0  00000000
+
+   11300:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   11310:	
+HS    04004022
+ALS0  91c0dc83  addd,0,sm 0x0, _f64,_lts0 0x11648, %dr3
+CS0   f0000000  return %ctpr3
+LTS2  00000000
+LTS1  00000000
+LTS0  00011648
+
+   11328:	
+HS    10000201  nop 4
+ALS2  a780c083  std,2,sm %dr0, 0x0, %dr3
+
+   11330:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000011338 <_ZN8MyClass211PrintBufferEv>:
+   11338:	
+HS    04108022
+ALS0  58ecd582  getsp,0 _f16s,_lts1hi 0xfff0, %dr2
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  fff00000
+LTS0  00000110
+
+   11350:	
+HS    04000011
+ALS0  91c0dc00  addd,0,sm 0x0, _f64,_lts0 0x11678, %db[0]
+LTS1  00000000
+LTS0  00011678
+
+   11360:	
+HS    04000011
+ALS0  91c0dc83  addd,0,sm 0x0, _f64,_lts0 0x11678, %dr3
+LTS1  00000000
+LTS0  00011678
+
+   11370:	
+HS    10000001
+ALS2  a782c083  std,2,sm %dr2, 0x0, %dr3
+
+   11378:	
+HS    00004201  nop 4
+CS0   4ffffeb9  disp %ctpr1, 0x10940
+
+   11380:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   11390:	
+HS    04000001
+ALS0  91c08000  addd,0,sm 0x0, %dr0, %db[0]
+
+   11398:	
+HS    00004201  nop 4
+CS0   4fffffc2  disp %ctpr1, 0x111a8
+
+   113a0:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   113b0:	
+HS    00004281  nop 5
+CS0   f0000000  return %ctpr3
+
+   113b8:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+00000000000113c0 <_ZN8MyClass2C1Ev>:
+   113c0:	
+HS    04108022
+ALS0  58ecd582  getsp,0 _f16s,_lts1hi 0xfff0, %dr2
+CS1   040000c4  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS1  fff00000
+LTS0  00000110
+
+   113d8:	
+HS    04004212  nop 4
+ALS0  91c08000  addd,0,sm 0x0, %dr0, %db[0]
+CS0   4fffffc8  disp %ctpr1, 0x11218
+LTS0  00000000
+
+   113e8:	
+HS    00009012
+SS    c0000420  ipd 3
+CS1   50000004  call %ctpr1, wbs = 0x4
+LTS0  00000000
+
+   113f8:	
+HS    04004022
+ALS0  91c0dc83  addd,0,sm 0x0, _f64,_lts0 0x11670, %dr3
+CS0   f0000000  return %ctpr3
+LTS2  00000000
+LTS1  00000000
+LTS0  00011670
+
+   11410:	
+HS    10000201  nop 4
+ALS2  a780c083  std,2,sm %dr0, 0x0, %dr3
+
+   11418:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+0000000000011420 <__libc_csu_init>:
+   11420:	
+HS    5c10c0d6  nop 1
+ALS0  3f81c086  rrd,0 %ip, %dr6
+ALS1  11c0dd87  addd,1 0x0, _f64,_lts1 0x1be0, %dr7
+ALS2  11c0c08a  addd,2 0x0, 0x0, %dr10
+ALS4  8cc28088  sxt,4,sm 0x2, %r0, %dr8
+CS0   8ffffe66  disp %ctpr2, 0x10750
+CS1   040000c7  setwd wsz = 0xb, nfx = 0x1, dbl = 0x0
+                setbn rbs = 0x7, rsz = 0x3, rcur = 0x0
+ALES0 01c0
+GAP       0000
+LTS3  00000000
+LTS2  00000000
+LTS1  00001be0
+LTS0  00000170
+
+   11450:	
+HS    0c100022
+ALS0  58ecd884  getsp,0 _f32s,_lts0 0xffffffe0, %dr4
+ALS1  11868785  addd,1 %dr6, %dr7, %dr5
+ALES0 01c0
+GAP       0000
+LTS1  00000000
+LTS0  ffffffe0
+
+   11468:	
+HS    0c0000b2  nop 1
+ALS0  9185dc8c  addd,0,sm %dr5, _f64,_lts0 0xfffffffffffffde0, %dr12
+ALS1  9185de80  addd,1,sm %dr5, _f64,_lts2 0xfffffffffffffde8, %dr0
+GAP   00000000
+LTS3  ffffffff
+LTS2  fffffde8
+LTS1  ffffffff
+LTS0  fffffde0
+
+   11488:	
+HS    00009012
+SS    c0000820  ipd 3
+CS1   50000007  call %ctpr2, wbs = 0x7
+LTS0  00000000
+
+   11498:	
+HS    04004012
+ALS0  13808cf0  subd,0 %dr0, %dr12, %dg16
+CS0   f0000000  return %ctpr3
+LTS0  00000000
+
+   114a8:	
+HS    04000011
+ALS0  1df0d0f1  sard,0 %dg16, _f16s,_lts0lo 0x3f, %dg17
+LTS1  00000000
+LTS0  0000003f
+
+   114b8:	
+HS    04000001
+ALS0  01f1c7f1  andd,0 %dg17, 0x7, %dg17
+
+   114c0:	
+HS    04000001
+ALS0  11f0f1f0  addd,0 %dg16, %dg17, %dg16
+
+   114c8:	
+HS    04000001
+ALS0  1df0c389  sard,0 %dg16, 0x3, %dr9
+
+   114d0:	
+HS    04000101  nop 2
+ALS0  21c08920  cmpbdb,0 0x0, %dr9, %pred0
+
+   114d8:	
+HS    00001001
+SS    c0000c60  ct %ctpr3 ? ~%pred0
+                ipd 3
+
+   114e0:	
+HS    7c000025
+ALS0  218a8920  cmpbdb,0 %dr10, %dr9, %pred0
+ALS1  998ac3f1  shld,1,sm %dr10, 0x3, %dg17
+ALS2  93898af0  subd,2,sm %dr9, %dr10, %dg16
+ALS3  91c0c084  addd,3,sm 0x0, 0x0, %dr4
+ALS4  11c0c085  addd,4 0x0, 0x0, %dr5
+
+   114f8:	
+HS    0c000012
+ALS0  a1f0d821  cmpbdb,0,sm %dg16, _f32s,_lts0 0x3ffffe0, %pred1
+ALS1  918cf187  addd,1,sm %dr12, %dg17, %dr7
+LTS0  03ffffe0
+
+   11508:	
+HS    0c010012
+ALS0  67878480  ldd,0 %dr7, %dr4, %dr0
+ALS1  11c1c086  addd,1 0x1, 0x0, %dr6 ? ~%pred0
+CDS0  09600000  rlp,cd00 %pred0, ~>alc1
+
+   11518:	
+HS    04010011
+ALS0  8ff0d886  merged,0,sm %dg16, _f32s,_lts0 0x3ffffe0, %dr6, ~%pred1 ? %pred0
+LTS0  03ffffe0
+CDS0  046084e1  rlp,cd00 %pred0, >alc0
+                mrgc,cd01 %pred1, ~>alc0
+
+   11528:	
+HS    04000001
+ALS0  118a868b  addd,0 %dr10, %dr6, %dr11
+
+   11530:	
+HS    fc0003b6  nop 7
+ALS0  e1c080d2  movtd,0,sm %dr0, %ctpr2
+ALS1  91c08202  addd,1,sm 0x0, %dr2, %db[2]
+ALS2  91c08101  addd,2,sm 0x0, %dr1, %db[1]
+ALS3  91c08800  addd,3,sm 0x0, %dr8, %db[0]
+ALS4  1185c185  addd,4 %dr5, 0x1, %dr5
+ALS5  91c88484  addd,5,sm 0x8, %dr4, %dr4
+LTS0  00000000
+
+	...
+   11558:	
+HS    00009012
+SS    c0000820  ipd 3
+CS1   50000007  call %ctpr2, wbs = 0x7
+LTS0  00000000
+
+   11568:	
+HS    04004012
+ALS0  218586c0  cmpldb,0 %dr5, %dr6, %pred0
+CS0   cffffff9  disp %ctpr3, 0x11530
+LTS0  00000000
+
+   11578:	
+HS    00004001
+CS0   40000006  disp %ctpr1, 0x115a8
+
+   11580:	
+HS    04010011
+ALS0  67878480  ldd,0 %dr7, %dr4, %dr0 ? %pred0
+LTS0  00000000
+CDS0  04600000  rlp,cd00 %pred0, >alc0
+
+   11590:	
+HS    00001001
+SS    c0000460  ct %ctpr1 ? ~%pred0
+                ipd 3
+
+	...
+   115a0:	
+HS    00001001
+SS    c0000c40  ct %ctpr3 ? %pred0
+                ipd 3
+
+   115a8:	
+HS    0c004013
+ALS0  218b8920  cmpbdb,0 %dr11, %dr9, %pred0
+ALS1  11c08b8a  addd,1 0x0, %dr11, %dr10
+CS0   f0000000  return %ctpr3
+
+   115b8:	
+HS    00004201  nop 4
+CS0   8fffffe5  disp %ctpr2, 0x114e0
+
+   115c0:	
+HS    00001001
+SS    c0000840  ct %ctpr2 ? %pred0
+                ipd 3
+
+   115c8:	
+HS    00001001
+SS    c0000c60  ct %ctpr3 ? ~%pred0
+                ipd 3
+
+
+00000000000115d0 <__libc_csu_fini>:
+   115d0:	
+HS    0000c292  nop 5
+CS0   f0000000  return %ctpr3
+CS1   00000000  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+LTS0  00000090
+
+   115e0:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
+
+Disassembly of section .fini:
+
+00000000000115e8 <_fini>:
+   115e8:	
+HS    00008011
+CS1   00000000  setwd wsz = 0xa, nfx = 0x1, dbl = 0x0
+LTS1  00000000
+LTS0  00000150
+
+   115f8:	
+HS    00004001
+CS0   f0000000  return %ctpr3
+
+   11600:	
+HS    00001001
+SS    c0000c20  ct %ctpr3
+                ipd 3
+
